@@ -1,0 +1,46 @@
+0->Y
+
+9->Dim List 1
+
+0->R
+1->C
+
+While Y=0:
+Goto 0
+Lbl 1
+"What Place"?->R
+If R=0:Then GoTo 2
+IfEnd
+If R>9:Then Goto 1
+IfEnd
+If List 1[R]≠0:Then Goto 1
+IfEnd
+C->List 1[R]
+If C=1:Then 2->C
+Else If C=2:Then 1->C
+IfEnd
+IfEnd
+WhileEnd
+
+Lbl 0
+ClrText
+" ▀ ▀ "
+"▀▀▀▀▀"
+" ▀ ▀ "
+"▀▀▀▀▀"
+" ▀ ▀ "
+Locate 1,1,List 1[1]
+Locate 3,1,List 1[2]
+Locate 5,1,List 1[3]
+Locate 1,3,List 1[4]
+Locate 3,3,List 1[5]
+Locate 5,3,List 1[6]
+Locate 1,5,List 1[7]
+Locate 3,5,List 1[8]
+Locate 5,5,List 1[9]
+Goto 1
+Lbl 2
+Do
+Getkey
+LpWhile Ans=0 Or Ans=31
+"Thanks for playing my game."
