@@ -1,9 +1,17 @@
+"WELCOME TO MY GAME"
+"TIC_TAC_TOE"
+"Press any key but EXE!"
+
+Do
+Getkey
+LpWhile Ans=0 or Ans=31
+
 0->Y
 
 9->Dim List 1
 
-0->R
-1->C
+0->R # Handles what the user inputs
+2->C # Handles the current player (X or O)
 
 While Y=0:
 Goto 0
@@ -13,14 +21,16 @@ If R=0:Then GoTo 2
 IfEnd
 If R>9:Then Goto 1
 IfEnd
-If List 1[R]≠0:Then Goto 1
+If List 1[R]≠1:Then Goto 1
 IfEnd
 C->List 1[R]
-If C=1:Then 2->C
-Else If C=2:Then 1->C
+If C=2:Then 3->C
+Else If C=3:Then 2->C
 IfEnd
 IfEnd
 WhileEnd
+
+## Computer Code Handeling
 
 Lbl 0
 ClrText
@@ -29,15 +39,15 @@ ClrText
 " ▀ ▀ "
 "▀▀▀▀▀"
 " ▀ ▀ "
-Locate 1,1,List 1[1]
-Locate 3,1,List 1[2]
-Locate 5,1,List 1[3]
-Locate 1,3,List 1[4]
-Locate 3,3,List 1[5]
-Locate 5,3,List 1[6]
-Locate 1,5,List 1[7]
-Locate 3,5,List 1[8]
-Locate 5,5,List 1[9]
+Locate 1,1,StrMid(Str 1, List 1[1], 1)
+Locate 3,1,StrMid(Str 1, List 1[2], 1)
+Locate 5,1,StrMid(Str 1, List 1[3], 1)
+Locate 1,3,StrMid(Str 1, List 1[4], 1)
+Locate 3,3,StrMid(Str 1, List 1[5], 1)
+Locate 5,3,StrMid(Str 1, List 1[6], 1)
+Locate 1,5,StrMid(Str 1, List 1[7], 1)
+Locate 3,5,StrMid(Str 1, List 1[8], 1)
+Locate 5,5,StrMid(Str 1, List 1[9], 1)
 Goto 1
 Lbl 2
 Do
