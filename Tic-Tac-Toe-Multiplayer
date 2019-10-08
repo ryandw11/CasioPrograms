@@ -10,6 +10,7 @@ LpWhile Ans=0 or Ans=31
 0->W # Handles if anyone has won
 
 9->Dim List 1
+Fill(1,List 1)
 
 0->R # Handles what the user inputs
 2->C # Handles the current player (X or O)
