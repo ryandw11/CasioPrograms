@@ -39,14 +39,14 @@ WhileEnd
 
 ## If anyone won
 Lbl 4
-List 1[1]=2 And List 1[2]=2 And List 1[3]=2 => 1->W
-List 1[4]=2 And List 1[5]=2 And List 1[6]=2 => 1->W
-List 1[7]=2 And List 1[8]=2 And List 1[9]=2 => 1->W
+For 3->P to 9 Step 3
+List 1[P-2]=2 And List 1[P-1]=2 And List 1[P]=2 => 1->W
+Next
 List 1[1]=2 And List 1[5]=2 And List 1[9]=2 => 1->W
 List 1[3]=2 And List 1[5]=2 And List 1[7]=2 => 1->W
-List 1[1]=3 And List 1[2]=3 And List 1[3]=3 => 2->W
-List 1[4]=3 And List 1[5]=3 And List 1[6]=3 => 2->W
-List 1[7]=3 And List 1[8]=3 And List 1[9]=3 => 2->W
+For 3->P to 9 Step 3
+List 1[P-2]=3 And List 1[P-1]=3 And List 1[P]=3 => 2->W
+Next
 List 1[1]=3 And List 1[5]=3 And List 1[9]=3 => 2->W
 List 1[3]=3 And List 1[5]=3 And List 1[7]=3 => 2->W
 Goto 5
